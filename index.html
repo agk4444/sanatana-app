@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanatana Dharma — Ask the Book (1916)</title>
+<meta name="description" content="Ask questions about Sanatana Dharma: An Elementary Text-book of Hindu Religion and Ethics (Central Hindu College, Benares, 1916). Answers drawn from the book's own pages, with page numbers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <img class="logo" src="favicon-512.png" alt="Om — Sanatana Dharma" width="72" height="72">
+    <p class="eyebrow">Central Hindu College &middot; Benares &middot; 1916</p>
+    <h1>Sanatana Dharma</h1>
+    <p class="rule" aria-hidden="true"><span></span></p>
+    <p class="subtitle">An Elementary Text-book of Hindu Religion and Ethics.<br>Ask the book a question — the answer comes from its own pages, with page numbers.</p>
+    <p class="top-links"><a href="#watch">Watch the book — all 24 chapters in one video</a></p>
+  </header>
+
+  <main>
+    <form id="ask-form" autocomplete="off">
+      <label for="question">Your question</label>
+      <div class="ask-row">
+        <textarea id="question" rows="2" maxlength="500" placeholder="What does the book say about caste — birth or conduct?" aria-describedby="hint"></textarea>
+        <button type="submit" id="ask-btn">Ask the book</button>
+      </div>
+      <p id="hint" class="hint">Answers are grounded in the 1916 text. If the book doesn't cover it, it says so.</p>
+    </form>
+
+    <div class="chips" id="chips" aria-label="Try a question">
+      <button type="button" data-q="What does the book say about caste — is it decided by birth or by conduct?">Caste: birth or conduct?</button>
+      <button type="button" data-q="What is karma according to this book?">What is karma?</button>
+      <button type="button" data-q="What are the four ashramas described in the book?">The four ashramas</button>
+      <button type="button" data-q="What does the book say about re-birth?">What is re-birth?</button>
+      <button type="button" data-q="What does the book say about sacrifice?">What is sacrifice?</button>
+    </div>
+
+    <section id="status" class="status" hidden>
+      <p class="reading"><span class="dot"></span><span class="dot"></span><span class="dot"></span> Reading the book…</p>
+    </section>
+
+    <section id="error" class="error" hidden></section>
+
+    <section id="result" class="result" hidden>
+      <p class="from-book">From the book</p>
+      <div id="answer" class="answer"></div>
+      <h2>Passages it used</h2>
+      <div id="passages" class="passages"></div>
+    </section>
+
+    <details class="how">
+      <summary>How it answers</summary>
+      <p>Your question is turned into a vector by the same embedding model the book was indexed with, the closest passages are pulled from the book's own text, and an answer is written from those passages alone — with the PDF page number for each point. Nothing is invented from outside the book.</p>
+    </details>
+
+    <section class="reader">
+      <h2>Read the book</h2>
+      <p class="reader-note">The full 1916 text, as scanned — read it here, or <a href="https://www.documentcloud.org/documents/28922146-sanatana-dharma-book/">open it on DocumentCloud</a>.</p>
+      <div class="embed-wrap">
+        <iframe src="https://embed.documentcloud.org/documents/28922146-sanatana-dharma-book/?embed=1" title="Sanatana Dharma (1916) — read the book" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="watch" id="watch">
+      <h2>Watch the book</h2>
+      <p class="reader-note">All 24 chapters in one video — spoken summaries, 1 hour 35 minutes — or <a href="https://youtu.be/1XDU6xd6fhU">watch it on YouTube</a>.</p>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/1XDU6xd6fhU" title="Sanatana Dharma (1916) — The Complete Book, Chapter by Chapter" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><em>Sanatana Dharma: An Elementary Text-book of Hindu Religion and Ethics</em> — compiled by the Board of Trustees, Central Hindu College, Benares, 1916. The scan's text is rough in places; quoted passages keep its quirks.</p>
+    <p><a href="https://kponline.in/wp-content/uploads/2023/05/AS-000505.pdf">Read the book (PDF, 64 MB)</a></p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
